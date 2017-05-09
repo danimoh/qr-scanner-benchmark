@@ -1,0 +1,40 @@
+Set 1: Fotos, partly out of focus
+zxing: Decoded 124 images out of 160 (77.5%, 0 required) - 3.18s (3.30s)
+cozmo: Decoded 156 images out of 160 (97.5%, 0 required) - 3.66s
+lazlo: Decoded 46 images out of 160 (28.75%, 0 required) - 1.69s
+
+Set 2: Artistic
+zxing: Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 1.98s (2.08s)
+cozmo: Decoded 140 images out of 168 (83.33333333333333%, 0 required) - 3.68s
+lazlo: Decoded 30 images out of 168 (17.857142857142858%, 0 required) - 1.11s
+
+Set 3: Fotos, perspective
+zxing: Decoded 302 images out of 336 (89.88095238095238%, 0 required) - 1.55s (1.54s)
+cozmo: Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.52s
+lazlo: Decoded 20 images out of 336 (5.9523809523809526%, 0 required) - 0.99s
+
+Set 4: Distorted
+zxing: Decoded 282 images out of 384 (73.4375%, 0 required) - 1.83s (1.75s)
+cozmo: Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 3.4s
+lazlo: Decoded 63 images out of 384 (16.40625%, 0 required) - 1.11s
+
+Set 5: Shade
+zxing: Decoded 120 images out of 120 (100%, 0 required) - 0.55s (0.54s)
+cozmo: Decoded 120 images out of 120 (100%, 0 required) - 0.91s
+lazlo: Decoded 20 images out of 120 (16.666666666666668%, 0 required) - 0.29s
+
+Set 6: Small, low res
+zxing: Decoded 111 images out of 120 (92.5%, 0 required) - 1.83s (1.9s)
+cozmo: Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 2.89s
+lazlo: Decoded 37 images out of 120 (30.833333333333332%, 0 required) - 0.8s
+
+Set 7: Fotographed screen
+zxing: Decoded 32 images out of 32 (100%, 0 required) - 0.16s (0.16s)
+cozmo: Decoded 32 images out of 32 (100%, 0 required) - 0.21s
+lazlo: Decoded 8 images out of 32 (25%, 0 required) - 0.09s
+
+
+Notes about runtime:
+zxing supports a standard mode and a tryHard mode. Usually, the tests run both modes (for cozmo and lazlo the flag is simply
+ignored and the tests are run twice with equal configuration). To make comparison fair, tryHard mode was enforced to
+true in AbstractBlackBox for all runs of zxing. These times are the one in parenthesis.
