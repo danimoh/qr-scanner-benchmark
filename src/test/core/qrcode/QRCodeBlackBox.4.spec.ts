@@ -21,6 +21,7 @@ import ImageReader from '../common/ImageReader';
 import QrReaderZXing from './QrReaderZXing';
 import QrReaderCozmo from './QrReaderCozmo';
 import QrReaderLazlo from './QrReaderLazlo';
+import QrReaderCozmoImproved from './QrReaderCozmoImproved';
 
 /**
  * Tests of various QR Codes from t-shirts, which are notoriously not flat.
@@ -54,6 +55,17 @@ describe('QRCodeBlackBox.4 cozmo', () => {
     it('testBlackBox 4 cozmo', done => {
         let start = Date.now();
         const test = new QRCodeBlackBox4Spec(new QrReaderCozmo());
+        return test.testBlackBox(() => {
+            console.log(`Took ${(Date.now() - start) / 1000}s`);
+            done();
+        });
+    });
+});
+
+describe('QRCodeBlackBox.4 cozmo improved', () => {
+    it('testBlackBox 4 cozmo improved', done => {
+        let start = Date.now();
+        const test = new QRCodeBlackBox4Spec(new QrReaderCozmoImproved());
         return test.testBlackBox(() => {
             console.log(`Took ${(Date.now() - start) / 1000}s`);
             done();

@@ -21,6 +21,7 @@ import ImageReader from '../common/ImageReader';
 import QrReaderZXing from './QrReaderZXing';
 import QrReaderCozmo from './QrReaderCozmo';
 import QrReaderLazlo from './QrReaderLazlo';
+import QrReaderCozmoImproved from './QrReaderCozmoImproved';
 
 /**
  * These tests are supplied by Tim Gernat and test finder pattern detection at small size and under
@@ -53,6 +54,17 @@ describe('QRCodeBlackBox.6 cozmo', () => {
     it('testBlackBox 6 cozmo', done => {
         let start = Date.now();
         const test = new QRCodeBlackBox6Spec(new QrReaderCozmo());
+        return test.testBlackBox(() => {
+            console.log(`Took ${(Date.now() - start) / 1000}s`);
+            done();
+        });
+    });
+});
+
+describe('QRCodeBlackBox.6 cozmo improved', () => {
+    it('testBlackBox 6 cozmo improved', done => {
+        let start = Date.now();
+        const test = new QRCodeBlackBox6Spec(new QrReaderCozmoImproved());
         return test.testBlackBox(() => {
             console.log(`Took ${(Date.now() - start) / 1000}s`);
             done();

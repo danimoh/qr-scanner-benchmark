@@ -21,6 +21,7 @@ import ImageReader from '../common/ImageReader';
 import QrReaderZXing from './QrReaderZXing';
 import QrReaderCozmo from './QrReaderCozmo';
 import QrReaderLazlo from './QrReaderLazlo';
+import QrReaderCozmoImproved from './QrReaderCozmoImproved';
 
 /**
  * Some very difficult exposure conditions including self-shadowing, which happens a lot when
@@ -56,6 +57,17 @@ describe('QRCodeBlackBox.5 cozmo', () => {
     it('testBlackBox 5 cozmo', done => {
         let start = Date.now();
         const test = new QRCodeBlackBox5Spec(new QrReaderCozmo());
+        return test.testBlackBox(() => {
+            console.log(`Took ${(Date.now() - start) / 1000}s`);
+            done();
+        });
+    });
+});
+
+describe('QRCodeBlackBox.5 cozmo improved', () => {
+    it('testBlackBox 5 cozmo improved', done => {
+        let start = Date.now();
+        const test = new QRCodeBlackBox5Spec(new QrReaderCozmoImproved());
         return test.testBlackBox(() => {
             console.log(`Took ${(Date.now() - start) / 1000}s`);
             done();

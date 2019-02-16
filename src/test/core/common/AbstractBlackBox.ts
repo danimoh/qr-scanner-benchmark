@@ -190,6 +190,7 @@ abstract class AbstractBlackBoxSpec {
             for (let x: number /*int*/ = 0; x < testCount; x++) {
                 const rotation: number /*float*/ = this.testResults[x].getRotation();
                 const { buffer: rgbaImage, width, height }  = await AbstractBlackBoxSpec.loadRgbaImage(testImage, rotation);
+                const rgbaImage2 = new Uint8ClampedArray(rgbaImage);
                 try {
                     if (this.decode(rgbaImage, width, height, rotation, expectedText, false)) {
                         passedCounts[x]++;
@@ -200,7 +201,8 @@ abstract class AbstractBlackBoxSpec {
                     console.log(`could not read at rotation ${rotation} failed with ${e.constructor.name}. Message: ${e.message}`);
                 }
                 try {
-                    if (this.decode(rgbaImage, width, height, rotation, expectedText, true)) {
+                    // using a copy of the image here to avoid side effects of previous test
+                    if (this.decode(rgbaImage2, width, height, rotation, expectedText, true)) {
                         tryHarderCounts[x]++;
                     } else {
                         tryHarderMisreadCounts[x]++;

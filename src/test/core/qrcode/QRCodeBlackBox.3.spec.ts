@@ -21,6 +21,7 @@ import ImageReader from '../common/ImageReader';
 import QrReaderZXing from './QrReaderZXing';
 import QrReaderCozmo from './QrReaderCozmo';
 import QrReaderLazlo from './QrReaderLazlo';
+import QrReaderCozmoImproved from './QrReaderCozmoImproved';
 
 /**
  * @author dswitkin@google.com (Daniel Switkin)
@@ -52,6 +53,17 @@ describe('QRCodeBlackBox.3 cozmo', () => {
     it('testBlackBox 3 cozmo', done => {
         let start = Date.now();
         const test = new QRCodeBlackBox3Spec(new QrReaderCozmo());
+        return test.testBlackBox(() => {
+            console.log(`Took ${(Date.now() - start) / 1000}s`);
+            done();
+        });
+    });
+});
+
+describe('QRCodeBlackBox.3 cozmo improved', () => {
+    it('testBlackBox 3 cozmo improved', done => {
+        let start = Date.now();
+        const test = new QRCodeBlackBox3Spec(new QrReaderCozmoImproved());
         return test.testBlackBox(() => {
             console.log(`Took ${(Date.now() - start) / 1000}s`);
             done();

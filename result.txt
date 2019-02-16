@@ -1,38 +1,47 @@
-Set 1: Fotos, partly out of focus
-zxing: Decoded 124 images out of 160 (77.5%, 0 required) - 3.18s (3.30s)
-cozmo: Decoded 156 images out of 160 (97.5%, 0 required) - 3.66s
-lazlo: Decoded 46 images out of 160 (28.75%, 0 required) - 1.69s
+Set 1 : Fotos, partly out of focus
+zxing : Decoded 124 images out of 160 (77.5%, 0 required) - 3.30s (3.44s)
+cozmo : Decoded 156 images out of 160 (97.5%, 0 required) - 3.94s
+cozmo2: Decoded 156 images out of 160 (97.5%, 0 required) - 3.28s
+laszlo: Decoded 92 images out of 160 (57.5%, 0 required) - 1.83s
 
-Set 2: Artistic
-zxing: Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 1.98s (2.08s)
-cozmo: Decoded 140 images out of 168 (83.33333333333333%, 0 required) - 3.68s
-lazlo: Decoded 30 images out of 168 (17.857142857142858%, 0 required) - 1.11s
+Set 2 : Artistic
+zxing : Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 2.06s (2.14s)
+cozmo : Decoded 140 images out of 168 (83.33333333333333%, 0 required) - 3.82s
+cozmo2: Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 3.31s
+laszlo: Decoded 60 images out of 168 (35.714285714285715%, 0 required) - 1.34s
 
-Set 3: Fotos, perspective
-zxing: Decoded 302 images out of 336 (89.88095238095238%, 0 required) - 1.55s (1.54s)
-cozmo: Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.52s
-lazlo: Decoded 20 images out of 336 (5.9523809523809526%, 0 required) - 0.99s
+Set 3 : Fotos, perspective
+zxing : Decoded 302 images out of 336 (89.88095238095238%, 0 required) - 1.61s (1.64s)
+cozmo : Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.52s
+cozmo2: Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.32s
+laszlo: Decoded 40 images out of 336 (11.904761904761905%, 0 required) - 1.26s
 
-Set 4: Distorted
-zxing: Decoded 282 images out of 384 (73.4375%, 0 required) - 1.83s (1.75s)
-cozmo: Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 3.4s
-lazlo: Decoded 63 images out of 384 (16.40625%, 0 required) - 1.11s
+Set 4 : Distorted
+zxing : Decoded 282 images out of 384 (73.4375%, 0 required) - 1.83s (1.87s)
+cozmo : Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 3.69s
+cozmo2: Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 2.63s
+laszlo: Decoded 126 images out of 384 (32.8125%, 0 required) - 1.40s
 
-Set 5: Shade
-zxing: Decoded 120 images out of 120 (100%, 0 required) - 0.55s (0.54s)
-cozmo: Decoded 120 images out of 120 (100%, 0 required) - 0.91s
-lazlo: Decoded 20 images out of 120 (16.666666666666668%, 0 required) - 0.29s
+Set 5 : Shade
+zxing : Decoded 120 images out of 120 (100%, 0 required) - 0.55s (0.54s)
+cozmo : Decoded 120 images out of 120 (100%, 0 required) - 0.91s
+cozmo2: Decoded 120 images out of 120 (100%, 0 required) - 0.75s
+laszlo: Decoded 40 images out of 120 (33.333333333333336%, 0 required) - 0.29s
 
-Set 6: Small, low res
-zxing: Decoded 111 images out of 120 (92.5%, 0 required) - 1.83s (1.9s)
-cozmo: Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 2.89s
-lazlo: Decoded 37 images out of 120 (30.833333333333332%, 0 required) - 0.8s
+Set 6 : Small, low res
+zxing : Decoded 111 images out of 120 (92.5%, 0 required) - 1.88s (1.96s)
+cozmo : Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 3.19s
+cozmo2: Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 2.07s
+laszlo: Decoded 74 images out of 120 (61.666666666666664%, 0 required) - 0.98s
 
-Set 7: Fotographed screen
-zxing: Decoded 32 images out of 32 (100%, 0 required) - 0.16s (0.16s)
-cozmo: Decoded 32 images out of 32 (100%, 0 required) - 0.21s
-lazlo: Decoded 8 images out of 32 (25%, 0 required) - 0.09s
+Set 7 : Fotographed screen
+zxing : Decoded 32 images out of 32 (100%, 0 required) - 0.13s (0.13s)
+cozmo : Decoded 32 images out of 32 (100%, 0 required) - 0.19s
+cozmo2: Decoded 32 images out of 32 (100%, 0 required) - 0.17s
+laszlo: Decoded 16 images out of 32 (50%, 0 required) - 0.07s
 
+
+Where cozmo2 is the improved cozmo scanner.
 
 Notes about runtime:
 zxing supports a standard mode and a tryHard mode. Usually, the tests run both modes (for cozmo and lazlo the flag is simply
