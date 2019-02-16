@@ -1,49 +1,44 @@
 Set 1 : Fotos, partly out of focus
-zxing : Decoded 124 images out of 160 (77.5%, 0 required) - 3.30s (3.44s)
-cozmo : Decoded 156 images out of 160 (97.5%, 0 required) - 3.94s
-cozmo2: Decoded 156 images out of 160 (97.5%, 0 required) - 3.28s
-laszlo: Decoded 92 images out of 160 (57.5%, 0 required) - 1.83s
+zxing : Decoded 62 images out of 80 (77.5%, 0 required) - 2.17s
+cozmo : Decoded 78 images out of 80 (97.5%, 0 required) - 2.18s
+cozmo2: Decoded 78 images out of 80 (97.5%, 0 required) - 2.09s
+laszlo: Decoded 46 images out of 80 (57.5%, 0 required) - 1.21s
 
 Set 2 : Artistic
-zxing : Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 2.06s (2.14s)
-cozmo : Decoded 140 images out of 168 (83.33333333333333%, 0 required) - 3.82s
-cozmo2: Decoded 142 images out of 168 (84.52380952380952%, 0 required) - 3.31s
-laszlo: Decoded 60 images out of 168 (35.714285714285715%, 0 required) - 1.34s
+zxing : Decoded 71 images out of 84 (84.52380952380952%, 0 required) - 1.36s
+cozmo : Decoded 70 images out of 84 (83.33333333333333%, 0 required) - 2.03s
+cozmo2: Decoded 71 images out of 84 (84.52380952380952%, 0 required) - 1.76s
+laszlo: Decoded 30 images out of 84 (35.714285714285715%, 0 required - 0.92s
 
 Set 3 : Fotos, perspective
-zxing : Decoded 302 images out of 336 (89.88095238095238%, 0 required) - 1.61s (1.64s)
-cozmo : Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.52s
-cozmo2: Decoded 316 images out of 336 (94.04761904761905%, 0 required) - 2.32s
-laszlo: Decoded 40 images out of 336 (11.904761904761905%, 0 required) - 1.26s
+zxing : Decoded 151 images out of 168 (89.88095238095238%, 0 required) - 1.03s
+cozmo : Decoded 158 images out of 168 (94.04761904761905%, 0 required) - 1.47s
+cozmo2: Decoded 158 images out of 168 (94.04761904761905%, 0 required) - 1.28s
+laszlo: Decoded 20 images out of 168 (11.904761904761905%, 0 required) - 0.80s
 
 Set 4 : Distorted
-zxing : Decoded 282 images out of 384 (73.4375%, 0 required) - 1.83s (1.87s)
-cozmo : Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 3.69s
-cozmo2: Decoded 280 images out of 384 (72.91666666666667%, 0 required) - 2.63s
-laszlo: Decoded 126 images out of 384 (32.8125%, 0 required) - 1.40s
+zxing : Decoded 141 images out of 192 (73.4375%, 0 required) - 1.14s
+cozmo : Decoded 140 images out of 192 (72.91666666666667%, 0 required) - 1.87s
+cozmo2: Decoded 140 images out of 192 (72.91666666666667%, 0 required) - 1.52s
+laszlo: Decoded 63 images out of 192 (32.8125%, 0 required) - 1.02s
 
 Set 5 : Shade
-zxing : Decoded 120 images out of 120 (100%, 0 required) - 0.55s (0.54s)
-cozmo : Decoded 120 images out of 120 (100%, 0 required) - 0.91s
-cozmo2: Decoded 120 images out of 120 (100%, 0 required) - 0.75s
-laszlo: Decoded 40 images out of 120 (33.333333333333336%, 0 required) - 0.29s
+zxing : Decoded 60 images out of 60 (100%, 0 required) - 0.39s
+cozmo : Decoded 60 images out of 60 (100%, 0 required) - 0.50s
+cozmo2: Decoded 60 images out of 60 (100%, 0 required) - 0.40s
+laszlo: Decoded 20 images out of 60 (33.333333333333336%, 0 required) - 0.18s
 
 Set 6 : Small, low res
-zxing : Decoded 111 images out of 120 (92.5%, 0 required) - 1.88s (1.96s)
-cozmo : Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 3.19s
-cozmo2: Decoded 94 images out of 120 (78.33333333333333%, 0 required) - 2.07s
-laszlo: Decoded 74 images out of 120 (61.666666666666664%, 0 required) - 0.98s
+zxing : Decoded 56 images out of 60 (93.33333333333333%, 0 required) - 1.04s
+cozmo : Decoded 47 images out of 60 (78.33333333333333%, 0 required) - 1.56s
+cozmo2: Decoded 47 images out of 60 (78.33333333333333%, 0 required) - 0.97s
+laszlo: Decoded 37 images out of 60 (61.666666666666664%, 0 required) - 0.58s
 
 Set 7 : Fotographed screen
-zxing : Decoded 32 images out of 32 (100%, 0 required) - 0.13s (0.13s)
-cozmo : Decoded 32 images out of 32 (100%, 0 required) - 0.19s
-cozmo2: Decoded 32 images out of 32 (100%, 0 required) - 0.17s
-laszlo: Decoded 16 images out of 32 (50%, 0 required) - 0.07s
+zxing : Decoded 16 images out of 16 (100%, 0 required) - 0.09s
+cozmo : Decoded 16 images out of 16 (100%, 0 required) - 0.12s
+cozmo2: Decoded 16 images out of 16 (100%, 0 required) - 0.08s
+laszlo: Decoded 8 images out of 16 (50%, 0 required) - 0.05s
 
 
 Where cozmo2 is the improved cozmo scanner.
-
-Notes about runtime:
-zxing supports a standard mode and a tryHard mode. Usually, the tests run both modes (for cozmo and lazlo the flag is simply
-ignored and the tests are run twice with equal configuration). To make comparison fair, tryHard mode was enforced to
-true in AbstractBlackBox for all runs of zxing. These times are the one in parenthesis.

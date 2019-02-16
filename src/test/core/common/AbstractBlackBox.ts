@@ -172,9 +172,11 @@ abstract class AbstractBlackBoxSpec {
         const tryHarderCounts = new Int32Array(testCount);
         const tryHarderMisreadCounts = new Int32Array(testCount);
 
+        const alsoTryWithoutHard = false;
+
         for (const testImage of imageFiles) {
 
-            console.log(`    Starting ${testImage}`);
+            // console.log(`    Starting ${testImage}`);
             const fileBaseName: string = path.basename(testImage, path.extname(testImage));
             let expectedTextFile: string = path.resolve(this.testBase, fileBaseName + '.txt');
             let expectedText: string;
@@ -190,25 +192,27 @@ abstract class AbstractBlackBoxSpec {
             for (let x: number /*int*/ = 0; x < testCount; x++) {
                 const rotation: number /*float*/ = this.testResults[x].getRotation();
                 const { buffer: rgbaImage, width, height }  = await AbstractBlackBoxSpec.loadRgbaImage(testImage, rotation);
-                const rgbaImage2 = new Uint8ClampedArray(rgbaImage);
-                try {
-                    if (this.decode(rgbaImage, width, height, rotation, expectedText, false)) {
-                        passedCounts[x]++;
-                    } else {
-                        misreadCounts[x]++;
+                if (alsoTryWithoutHard) {
+                    try {
+                        // creating a copy of rgbaImage to avoid side effects between tests
+                        if (this.decode(new Uint8ClampedArray(rgbaImage), width, height, rotation, expectedText, false)) {
+                            passedCounts[x]++;
+                        } else {
+                            misreadCounts[x]++;
+                        }
+                    } catch (e) {
+                        // console.log(`could not read at rotation ${rotation} failed with ${e.constructor.name}. Message: ${e.message}`);
                     }
-                } catch (e) {
-                    console.log(`could not read at rotation ${rotation} failed with ${e.constructor.name}. Message: ${e.message}`);
                 }
                 try {
                     // using a copy of the image here to avoid side effects of previous test
-                    if (this.decode(rgbaImage2, width, height, rotation, expectedText, true)) {
+                    if (this.decode(rgbaImage, width, height, rotation, expectedText, true)) {
                         tryHarderCounts[x]++;
                     } else {
                         tryHarderMisreadCounts[x]++;
                     }
                 } catch (e) {
-                    console.log(`could not read at rotation ${rotation} w/TH failed with ${e.constructor.name}.`);
+                    // console.log(`could not read at rotation ${rotation} w/TH failed with ${e.constructor.name}.`);
                 }
             }
         }
@@ -223,9 +227,12 @@ abstract class AbstractBlackBoxSpec {
         for (let x: number /*int*/ = 0, length = this.testResults.length; x < length; x++) {
             const testResult: TestResult = this.testResults[x];
             console.log(`\n      Rotation ${testResult.getRotation()} degrees:`);
-            console.log(`        ${passedCounts[x]} of ${imageFiles.length} images passed (${testResult.getMustPassCount()} required)`);
-            let failed: number /*int*/ = imageFiles.length - passedCounts[x];
-            console.log(`        ${misreadCounts[x]} failed due to misreads, ${failed - misreadCounts[x]} not detected`);
+            let failed: number /*int*/;
+            if (alsoTryWithoutHard) {
+                console.log(`        ${passedCounts[x]} of ${imageFiles.length} images passed (${testResult.getMustPassCount()} required)`);
+                failed = imageFiles.length - passedCounts[x];
+                console.log(`        ${misreadCounts[x]} failed due to misreads, ${failed - misreadCounts[x]} not detected`);
+            }
             console.log(`        ${tryHarderCounts[x]} of ${imageFiles.length} images passed with try harder (${testResult.getTryHarderCount()} required)`);
             failed = imageFiles.length - tryHarderCounts[x];
             console.log(`        ${tryHarderMisreadCounts[x]} failed due to misreads, ${failed - tryHarderMisreadCounts[x]} not detected`);
@@ -235,7 +242,8 @@ abstract class AbstractBlackBoxSpec {
             totalMaxMisread += testResult.getMaxMisreads() + testResult.getMaxTryHarderMisreads();
         }
 
-        const totalTests: number /*int*/ = imageFiles.length * testCount * 2;
+        const totalTests: number /*int*/ = imageFiles.length * testCount
+            * (alsoTryWithoutHard ? 2 : 1);
 
         console.log(`    Decoded ${totalFound} images out of ${totalTests} (${totalFound * 100 / totalTests}%, ${totalMustPass} required)`);
 
@@ -279,8 +287,6 @@ abstract class AbstractBlackBoxSpec {
         expectedText: string,
         tryHarder: boolean
     ): boolean {
-        tryHarder = true; // TODO remove hack
-
         const suffix: string = ` (${tryHarder ? 'try harder, ' : ''}rotation: ${rotation})`;
 
         const hints = new Map<DecodeHintType, any>();
@@ -311,7 +317,7 @@ abstract class AbstractBlackBoxSpec {
         if (expectedTextR !== resultTextR) {
             const expectedTextHexCodes = AbstractBlackBoxSpec.toDebugHexStringCodes(expectedTextR);
             const resultTextHexCodes = AbstractBlackBoxSpec.toDebugHexStringCodes(resultTextR);
-            console.warn(`Content mismatch: expected '${expectedTextR}' (${expectedTextHexCodes}) but got '${resultTextR}'${suffix} (${resultTextHexCodes})`);
+            // console.warn(`Content mismatch: expected '${expectedTextR}' (${expectedTextHexCodes}) but got '${resultTextR}'${suffix} (${resultTextHexCodes})`);
             return false;
         }
 
@@ -374,8 +380,8 @@ abstract class AbstractBlackBoxSpec {
     protected static readTextFileAsString(file: string): string {
         const stringContents: string = fs.readFileSync(file, { encoding: 'utf8' });
         if (stringContents.endsWith('\n')) {
-            console.warn('contents: string of file ' + file + ' end with a newline. ' +
-                'This may not be intended and cause a test failure');
+            // console.warn('contents: string of file ' + file + ' end with a newline. ' +
+            //    'This may not be intended and cause a test failure');
         }
         return stringContents;
     }
