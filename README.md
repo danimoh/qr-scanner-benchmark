@@ -8,4 +8,6 @@ The results are contained in `result.txt`.
 
 For jsqrcode even an imrpoved version from https://github.com/nimiq/qr-scanner/tree/540030c81fdeef0cd053dd7d6a0012438755df2a is used. Still it performs the worst.
 
+For the cozmo scanner, two versions are tested: the original and an improved version from https://github.com/danimoh/jsQR.
+
 To run the tests yourself, run `yarn test`.

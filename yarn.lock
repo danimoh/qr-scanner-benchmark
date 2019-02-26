@@ -3013,10 +3013,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsqr-es6@^1.2.0-2:
-  version "1.2.0-2"
-  resolved "https://registry.yarnpkg.com/jsqr-es6/-/jsqr-es6-1.2.0-2.tgz#7797059bc5a9165cb039afde9053fec81e9670aa"
-  integrity sha512-+Fc2JNNK8F3zHeMQ/bZrcnaTlv75IaIRPjGECKTtiLNIwKWrGGJv2+kMgSGnQZQX7n8RQcU3cvayuFbkYeGsGw==
+jsqr-es6@^1.2.0-3:
+  version "1.2.0-3"
+  resolved "https://registry.yarnpkg.com/jsqr-es6/-/jsqr-es6-1.2.0-3.tgz#3cf46ffeda578fbd331ea77a52c36edb3bdb8003"
+  integrity sha512-A3j4av6EBnTZUyI2odwhpyqO0fQPepguSRKWEFefyU4yeKqSgfSf0/G8IAsQxS/ErnmQuW67z4hCVm0zKMHepg==
 
 jsqr@^1.2.0:
   version "1.2.0"

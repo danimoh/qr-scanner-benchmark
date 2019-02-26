@@ -1,37 +1,37 @@
 Set 1 : Fotos, partly out of focus
 zxing : Decoded 62 images out of 80 (77.5%, 0 required) - 2.17s
 cozmo : Decoded 78 images out of 80 (97.5%, 0 required) - 2.18s
-cozmo2: Decoded 78 images out of 80 (97.5%, 0 required) - 2.09s
+cozmo2: Decoded 80 images out of 80 (100%, 0 required) - 1.99s
 laszlo: Decoded 46 images out of 80 (57.5%, 0 required) - 1.21s
 
 Set 2 : Artistic
 zxing : Decoded 71 images out of 84 (84.52380952380952%, 0 required) - 1.36s
 cozmo : Decoded 70 images out of 84 (83.33333333333333%, 0 required) - 2.03s
-cozmo2: Decoded 71 images out of 84 (84.52380952380952%, 0 required) - 1.76s
+cozmo2: Decoded 70 images out of 84 (83.33333333333333%, 0 required) - 1.86s
 laszlo: Decoded 30 images out of 84 (35.714285714285715%, 0 required - 0.92s
 
 Set 3 : Fotos, perspective
 zxing : Decoded 151 images out of 168 (89.88095238095238%, 0 required) - 1.03s
 cozmo : Decoded 158 images out of 168 (94.04761904761905%, 0 required) - 1.47s
-cozmo2: Decoded 158 images out of 168 (94.04761904761905%, 0 required) - 1.28s
+cozmo2: Decoded 155 images out of 168 (92.26190476190476%, 0 required) - 1.32s
 laszlo: Decoded 20 images out of 168 (11.904761904761905%, 0 required) - 0.80s
 
 Set 4 : Distorted
 zxing : Decoded 141 images out of 192 (73.4375%, 0 required) - 1.14s
 cozmo : Decoded 140 images out of 192 (72.91666666666667%, 0 required) - 1.87s
-cozmo2: Decoded 140 images out of 192 (72.91666666666667%, 0 required) - 1.52s
+cozmo2: Decoded 145 images out of 192 (75.52083333333333%, 0 required) - 1.50s
 laszlo: Decoded 63 images out of 192 (32.8125%, 0 required) - 1.02s
 
 Set 5 : Shade
 zxing : Decoded 60 images out of 60 (100%, 0 required) - 0.39s
 cozmo : Decoded 60 images out of 60 (100%, 0 required) - 0.50s
-cozmo2: Decoded 60 images out of 60 (100%, 0 required) - 0.40s
+cozmo2: Decoded 60 images out of 60 (100%, 0 required) - 0.38s
 laszlo: Decoded 20 images out of 60 (33.333333333333336%, 0 required) - 0.18s
 
 Set 6 : Small, low res
 zxing : Decoded 56 images out of 60 (93.33333333333333%, 0 required) - 1.04s
 cozmo : Decoded 47 images out of 60 (78.33333333333333%, 0 required) - 1.56s
-cozmo2: Decoded 47 images out of 60 (78.33333333333333%, 0 required) - 0.97s
+cozmo2: Decoded 48 images out of 60 (80%, 0 required) - 0.94s
 laszlo: Decoded 37 images out of 60 (61.666666666666664%, 0 required) - 0.58s
 
 Set 7 : Fotographed screen
